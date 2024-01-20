@@ -7,9 +7,33 @@
     background: url("../../assets/images/sitebg2.jpg") no-repeat center fixed;
     /* background: url("https://res.cloudinary.com/springbootcloud/image/upload/v1591262123/images/sitebg2.jpg") no-repeat center fixed; */
 }
-
 section{
     padding: 6rem, 0;
+}
+::-webkit-scrollbar {
+    width: 0; /* Remove scrollbar space */
+    background: transparent; /* Optional: just make scrollbar invisible */
+ }
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.6);
+	background-color: #CCCCCC;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb
+{
+	background-color: #FFF;
+	background-image: -webkit-linear-gradient(90deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 25%,
+      transparent 100%,
+      rgba(0, 0, 0, 1) 75%,
+      transparent)
 }
 
 a{
@@ -125,6 +149,7 @@ li{
 .nav-link:hover,
 .nav-link:focus{
     color: salmon;
+    cursor: pointer;
 }
 
 .top-nav.open{
@@ -501,8 +526,10 @@ input[type="submit"]:hover{
 @media screen and (max-width : 768px){
     .abhi{
         /* background: url("https://res.cloudinary.com/springbootcloud/image/upload/v1591262123/images/gsn_2.JPEG") no-repeat center fixed; */
-        background: url("../../assets/images/gsn_2.jpg") no-repeat center fixed;
+        background: url("../../assets/images/gsn1.jpg") no-repeat center fixed;
         background-size: cover;
+        margin: 0px;
+        padding: 0px;
     }
     .landing-text h1{
         font-size: 8rem;
@@ -628,7 +655,22 @@ input[type="submit"]:hover{
     }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 740px){
+    .icon-container{
+        width: 7rem;
+        height: 7rem;
+        border: 3px solid white;
+        background: black;
+    }
+
+    .icon-container i{
+        font-size: 4rem;
+        color: white;
+    }
+    .abhi{
+        margin: 0px;
+        padding: 0px;
+    }
     .menu-toggler{
         top: 2rem;
         right: 2rem;
@@ -676,9 +718,37 @@ input[type="submit"]:hover{
     .up{
         right: 2rem;
     }
+    .about-heading h1{
+        font-size: 3rem;
+    }
+    .nav-list{
+        width: 80%;
+        height: 100%;
+        
+    }
 }
 @media screen and (max-width: 480px) {
+    .icon-container{
+        background: black;
+        width: 6rem;
+        height: 6rem;
+        border: 2px solid white;
+        border-radius: 50%;
+    }
 
+    .icon-container i{
+        font-size: 4rem;
+        color: white;
+        transform: rotate(-45deg);
+    }
+    .nav-list{
+        width: 80%;
+        height: 100%;
+        
+    }
+    .timeline ul{
+        padding: 2rem;
+    }
     .about-heading h1{
         font-size: 3rem;
     }
@@ -692,25 +762,6 @@ input[type="submit"]:hover{
     
     .skill {
         padding: 1rem; 
-    }
-    
-    .icon-container {
-        width: 6rem;
-        height: 6rem;
-        border: 2px solid white;
-        border-radius: 50%;
-        background: linear-gradient(to right, #38022c, #fd57bf);
-        margin-bottom: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform: rotate(45deg);
-    }
-    
-    .icon-container i {
-        color: white;
-        font-size: 3rem;
-        transform: rotate(-45deg);
     }
     
     .skill h1 {

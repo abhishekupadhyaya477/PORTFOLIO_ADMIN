@@ -77,7 +77,7 @@ export class PortfolioComponent implements OnInit  {
           projectName: 'Todo list',
           projectDescription: `Don't just procastinate things add your todos here so that you can make a track of it`,
           projectLink: 'https://abhishekupadhyaya477.github.io/TodoLists.io/',
-          projectImage: 'assets/images/todoList.png'
+          projectImage: 'assets/images/todo.png'
         },
         {
           projectName: 'Covid buddy',
