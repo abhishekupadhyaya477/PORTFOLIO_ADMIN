@@ -173,7 +173,7 @@ li{
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-    z-index: 1500;
+    z-index: 1000;
     transition: transform 650ms ease-in-out;
 }
 
