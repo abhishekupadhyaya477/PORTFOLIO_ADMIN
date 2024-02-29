@@ -2,10 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component, ElementRef, OnDestroy, OnInit, Renderer2 } from '@angular/core';
 import { PortfolioService } from './portfolio.service';
 import { HttpClientModule } from '@angular/common/http';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import { RegistrationComponent } from './registration/registration.component';
+
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [CommonModule,HttpClientModule],
+  imports: [CommonModule,HttpClientModule,MatDialogModule],
   providers:[PortfolioService],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.css'
@@ -16,7 +19,7 @@ export class PortfolioComponent implements OnInit,OnDestroy   {
   owner: boolean=false;
   isMenuOpen: boolean=false;
   // private audio: HTMLAudioElement=new Audio('../../assets/files/introMusic.mp3');
-  constructor(private el: ElementRef, private renderer: Renderer2, private service: PortfolioService){ }
+  constructor(private el: ElementRef, private renderer: Renderer2, private service: PortfolioService,private dialog:MatDialog){ }
  
   ngOnInit(): void {
     this.getUserDetails()
@@ -112,6 +115,11 @@ export class PortfolioComponent implements OnInit,OnDestroy   {
       this.service.getPortfolioDetails(user).subscribe((res:any) =>{
         this.userDetailsModel=res;
         console.log(res);
+      })
+    }
+    registerUser(){
+      this.dialog.open(RegistrationComponent,{
+        width: '600px',
       })
     }
   //   playAudio(): void {
